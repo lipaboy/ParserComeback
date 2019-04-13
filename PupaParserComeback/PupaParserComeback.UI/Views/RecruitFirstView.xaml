@@ -54,7 +54,7 @@
                                    Text="{x:Static constants:TitleConstants.PassportInfoCardTitle}" />
 
                             <TextBox Grid.Row="1"
-                                     Margin="5 10 5 10"
+                                     Margin="0 0 0 0"
                                      HorizontalContentAlignment="Left" 
                                      VerticalContentAlignment="Center"
                                      materialDesign:HintAssist.Hint="{x:Static cards:PassportInfoCard.CodeFieldName}" 
@@ -64,7 +64,7 @@
                                                     ValidatesOnDataErrors=True }" />
 
                             <TextBox Grid.Row="2"
-                                     Margin="5 10 5 10"
+                                     Margin="0 0 0 0"
                                      HorizontalContentAlignment="Left" 
                                      VerticalContentAlignment="Center"
                                      materialDesign:HintAssist.Hint="{x:Static cards:PassportInfoCard.IssueByFieldName}" 
@@ -74,7 +74,7 @@
                                                     ValidatesOnDataErrors=True}" />
 
                             <DatePicker Grid.Row="3"
-                                        Margin="5 30 5 5"
+                                        Margin="0 20 0 0"
                                         HorizontalContentAlignment="Left" 
                                         VerticalContentAlignment="Center"
                                         materialDesign:HintAssist.Hint="{x:Static cards:PassportInfoCard.IssueDateFieldName}" 
@@ -82,7 +82,7 @@
                                         SelectedDate="{Binding RecruitCardGroup.FirstCardGroup.PassportInfoCard.IssueDate}" />
 
                             <TextBox Grid.Row="4"
-                                     Margin="5 5 5 15"
+                                     Margin="0 0 0 0"
                                      HorizontalContentAlignment="Left" 
                                      VerticalContentAlignment="Center"
                                      materialDesign:HintAssist.Hint="{x:Static cards:PassportInfoCard.DevisionCodeFieldName}" 
@@ -106,13 +106,13 @@
                             </Grid.RowDefinitions>
 
                             <TextBlock Grid.Row="0"
-                                       Margin="16 16 12 0"
+                                       Margin="0 0 0 0"
                                        Padding="0 0 0 10"
                                        FontSize="16"
                                        Text="{x:Static constants:TitleConstants.PassportAccommodationCardTitle}"/>
 
                             <TextBox Grid.Row="1"
-                                     Margin="5 10 5 10"
+                                     Margin="0 0 0 0"
                                      HorizontalContentAlignment="Left" 
                                      VerticalContentAlignment="Center"
                                      materialDesign:HintAssist.Hint="{x:Static cards:PassportAccommodationCard.LocalityFieldName}" 
@@ -128,7 +128,7 @@
                                 </Grid.ColumnDefinitions>
 
                                 <TextBox Grid.Column="0"
-                                         Margin="5 10 5 10"
+                                         Margin="0 0 0 0"
                                          HorizontalContentAlignment="Left" 
                                          VerticalContentAlignment="Center"
                                          materialDesign:HintAssist.Hint="{x:Static cards:PassportAccommodationCard.RegisterLocationFieldName}" 
@@ -152,7 +152,7 @@
                                 </Grid.ColumnDefinitions>
 
                                 <TextBox Grid.Column="0"
-                                         Margin="5 10 5 15"
+                                         Margin="0 0 0 0"
                                          HorizontalContentAlignment="Left" 
                                          VerticalContentAlignment="Center"
                                          materialDesign:HintAssist.Hint="{x:Static cards:PassportAccommodationCard.ActuallyLocationFieldName}" 
