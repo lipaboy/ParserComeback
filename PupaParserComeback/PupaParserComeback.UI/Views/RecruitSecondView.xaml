@@ -51,13 +51,13 @@
                             </Grid.RowDefinitions>
 
                             <TextBlock Grid.Row="0"
-                                       Margin="16 16 12 0" 
+                                       Margin="0 0 0 0" 
                                        Padding="0 0 0 10" 
                                        FontSize="16"
                                        Text="{x:Static constants:TitleConstants.MilitaryDocumentCardTitle}" />
 
                             <TextBox Grid.Row="1"
-                                     Margin="5 10 5 10"
+                                     Margin="0 0 0 0" 
                                      HorizontalContentAlignment="Left" 
                                      VerticalContentAlignment="Center"
                                      materialDesign:HintAssist.Hint="{x:Static cards:MilitaryDocumentCard.PersonalNumberFieldName}" 
@@ -67,7 +67,7 @@
                                                     ValidatesOnDataErrors=True}" />
 
                             <TextBox Grid.Row="2"
-                                     Margin="5 10 5 10"
+                                     Margin="0 0 0 0" 
                                      HorizontalContentAlignment="Left" 
                                      VerticalContentAlignment="Center"
                                      materialDesign:HintAssist.Hint="{x:Static cards:MilitaryDocumentCard.MilitaryBilletCodeFieldName}" 
@@ -77,7 +77,7 @@
                                                     ValidatesOnDataErrors=True}" />
 
                             <ComboBox Grid.Row="3"
-                                      Margin="5 10 5 10"
+                                      Margin="0 0 0 0" 
                                       HorizontalContentAlignment="Left" 
                                       VerticalContentAlignment="Center"
                                       materialDesign:HintAssist.Hint="{x:Static cards:MilitaryDocumentCard.AccessFormFieldName}" 
@@ -89,7 +89,7 @@
                                       IsEnabled="{Binding RecruitCardGroup.SecondCardGroup.MilitaryDocumentCard.IsHaveSecretAccess}" />
 
                             <TextBox Grid.Row="4"
-                                     Margin="5 10 5 10"
+                                     Margin="0 0 0 0" 
                                      HorizontalContentAlignment="Left" 
                                      VerticalContentAlignment="Center"
                                      materialDesign:HintAssist.Hint="{x:Static cards:MilitaryDocumentCard.SecretAccessNumberFieldName}" 
@@ -102,7 +102,7 @@
                                                          ValidatesOnDataErrors=True}" />
 
                             <DatePicker Grid.Row="5" 
-                                        Margin="5 25 5 0"
+                                        Margin="0 20 0 0" 
                                         HorizontalContentAlignment="Left" 
                                         VerticalContentAlignment="Center"
                                         materialDesign:HintAssist.Hint="{x:Static cards:MilitaryDocumentCard.SecretAccessIssueDateFieldName}" 
@@ -111,7 +111,7 @@
                                         IsEnabled="{Binding RecruitCardGroup.SecondCardGroup.MilitaryDocumentCard.IsHaveSecretAccess}" />
 
                             <ToggleButton Grid.Row="6"
-                                          Margin="5 25 5 5"
+                                          Margin="0 0 0 0" 
                                           Style="{StaticResource MaterialDesignActionToggleButton}"
                                           ToolTip="{x:Static cards:MilitaryDocumentCard.IsHaveSecretAccessFieldName}"
                                           IsChecked="{Binding RecruitCardGroup.SecondCardGroup.MilitaryDocumentCard.IsHaveSecretAccess}">
@@ -148,13 +148,13 @@
                             </Grid.RowDefinitions>
 
                             <TextBlock Grid.Row="0"
-                                       Margin="16 16 12 0" 
+                                       Margin="0 0 0 0" 
                                        Padding="0 0 0 10" 
                                        FontSize="16"
                                        Text="{x:Static constants:TitleConstants.ProficiencyCardTitle}" />
 
                             <ComboBox Grid.Row="1"
-                                      Margin="5 10 5 10"
+                                      Margin="0 0 0 0" 
                                       HorizontalContentAlignment="Left" 
                                       VerticalContentAlignment="Center"
                                       materialDesign:HintAssist.Hint="{x:Static cards:ProficiencyCard.ProficiencyCategoryFieldName}" 
@@ -165,7 +165,7 @@
                                                              ValidatesOnDataErrors=True}" />
 
                             <ComboBox Grid.Row="2"
-                                      Margin="5 10 5 10"
+                                      Margin="0 0 0 0" 
                                       HorizontalContentAlignment="Left" 
                                       VerticalContentAlignment="Center"
                                       materialDesign:HintAssist.Hint="{x:Static cards:ProficiencyCard.OfficialStatusFieldName}" 
@@ -176,7 +176,7 @@
                                                              ValidatesOnDataErrors=True}" />
 
                             <ComboBox Grid.Row="3"
-                                      Margin="5 10 5 10"
+                                      Margin="0 0 0 0" 
                                       HorizontalContentAlignment="Left" 
                                       VerticalContentAlignment="Center"
                                       materialDesign:HintAssist.Hint="{x:Static cards:ProficiencyCard.NervouslyPsychologicalStabilityFieldName}" 
@@ -187,7 +187,7 @@
                                                              ValidatesOnDataErrors=True}" />
 
                             <ComboBox Grid.Row="4"
-                                      Margin="5 10 5 15"
+                                      Margin="0 0 0 0" 
                                       HorizontalContentAlignment="Left" 
                                       VerticalContentAlignment="Center"
                                       materialDesign:HintAssist.Hint="{x:Static cards:ProficiencyCard.GeneralPsychologicalStabilityFieldName}" 
@@ -212,7 +212,7 @@
                             </Grid.RowDefinitions>
 
                             <TextBlock Grid.Row="0"
-                                       Margin="16 16 12 0" 
+                                       Margin="0 0 0 0" 
                                        Padding="0 0 0 10" 
                                        FontSize="16"
                                        Text="{x:Static constants:TitleConstants.DistributionCardTitle}" />
@@ -223,7 +223,7 @@
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
 
-                                <TextBox Margin="5 10 5 20"
+                                <TextBox Margin="0 0 0 0" 
                                          HorizontalContentAlignment="Left" 
                                          VerticalContentAlignment="Center"
                                          materialDesign:HintAssist.Hint="{x:Static cards:DistributionCard.SpecialityFieldName}" 
@@ -246,7 +246,7 @@
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
 
-                                <TextBox Margin="5 10 5 20"
+                                <TextBox Margin="0 0 0 0" 
                                          HorizontalContentAlignment="Left" 
                                          VerticalContentAlignment="Center"
                                          materialDesign:HintAssist.Hint="{x:Static cards:DistributionCard.TeamModeFieldName}" 
@@ -285,13 +285,13 @@
                             </Grid.RowDefinitions>
 
                             <TextBlock Grid.Row="0"
-                                       Margin="16 16 12 0" 
+                                       Margin="0 0 0 0" 
                                        Padding="0 0 0 10" 
                                        FontSize="16" 
                                        Text="{x:Static constants:TitleConstants.DriverCardTitle}" />
 
                             <TextBox Grid.Row="1"
-                                     Margin="5 10 5 10"
+                                     Margin="0 0 0 0" 
                                      HorizontalContentAlignment="Left" 
                                      VerticalContentAlignment="Center"
                                      materialDesign:HintAssist.Hint="{x:Static cards:DriverCard.DriverLicenseCodeFieldName}" 
@@ -302,7 +302,7 @@
                                      IsEnabled="{Binding RecruitCardGroup.SecondCardGroup.DriverCard.IsDriver}" />
 
                             <DatePicker Grid.Row="2"
-                                    Margin="5 15 5 15"
+                                    Margin="0 20 0 0" 
                                     HorizontalContentAlignment="Left" 
                                     VerticalContentAlignment="Center"
                                     materialDesign:HintAssist.Hint="{x:Static cards:DriverCard.DriverLicenseIssueDateFieldName}" 
@@ -339,13 +339,13 @@
                             </Grid.RowDefinitions>
 
                             <TextBlock Grid.Row="0"
-                                   Margin="16 16 12 0" 
+                                   Margin="0 0 0 0" 
                                    Padding="0 0 0 10" 
                                    FontSize="16"
                                    Text="{x:Static constants:TitleConstants.CivilCardTitle}" />
 
                             <ComboBox Grid.Row="1"
-                                      Margin="5 10 5 10"
+                                      Margin="0 0 0 0" 
                                       HorizontalContentAlignment="Left" 
                                       VerticalContentAlignment="Center"
                                       materialDesign:HintAssist.Hint="{x:Static cards:CivilCard.EducationFieldName}" 
@@ -356,7 +356,7 @@
                                                              ValidatesOnDataErrors=True}" />
 
                             <TextBox Grid.Row="2"
-                                     Margin="5 10 5 10"
+                                     Margin="0 0 0 0" 
                                      HorizontalContentAlignment="Left"
                                      VerticalContentAlignment="Center"
                                      materialDesign:HintAssist.Hint="{x:Static cards:CivilCard.ProfessionFieldName}" 
@@ -366,7 +366,7 @@
                                                     ValidatesOnDataErrors=True}" />
 
                             <ComboBox Grid.Row="3"
-                                      Margin="5 5 5 30"
+                                      Margin="0 0 0 0" 
                                       HorizontalContentAlignment="Left" 
                                       VerticalContentAlignment="Center"
                                       materialDesign:HintAssist.Hint="{x:Static cards:CivilCard.OccupationFieldName}" 
