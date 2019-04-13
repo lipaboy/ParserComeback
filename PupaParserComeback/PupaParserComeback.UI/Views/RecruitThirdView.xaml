@@ -380,7 +380,7 @@
                                                                         ValidatesOnDataErrors=True}" />
 
                                                 <DatePicker Grid.Row="1" 
-                                                            Margin="0 0 0 0" 
+                                                            Margin="0 20 0 0" 
                                                             HorizontalContentAlignment="Left" 
                                                             VerticalContentAlignment="Center"
                                                             materialDesign:HintAssist.Hint="{x:Static cards:RelativeInfoCard.BirthDateFieldName}" 
