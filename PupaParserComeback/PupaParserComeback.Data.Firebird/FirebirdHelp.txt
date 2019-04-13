@@ -1,0 +1,78 @@
+----------------------------------------------------------------------
+Подготовка Visual Studio 2015 для работы с Firebird
+
+Для работы с Firebird вам необходимо установить: 
+FirebirdSql.Data.FirebirdClient.dll
+EntityFramework.Firebird.dll
+DDEX Provider for Visual Studio
+
+
+Установка первых двух не вызывает никаких сложностей. В настоящий момент они распространяются и устанавливаются в проект с помощью NuGet. А вот последняя библиотека, предназначенная для работы мастеров Visual Studio, устанавливается не так легко и может потратить у вас много сил и времени.
+
+Добрые люди попытались автоматизировать процесс установки и включить установку всех компонентов в один дистрибутив. Однако в ряде случаев вам может потребоваться ручная установка всех компонентов. В этом случае вам потребуется скачать:
+FirebirdSql.Data.FirebirdClient-4.10.0.0.msi
+EntityFramework.Firebird-4.10.0.0-NET45.7z
+DDEXProvider-3.0.2.0.7z
+DDEXProvider-3.0.2.0-src.7z
+
+
+Далее описан процесс установки:
+
+Устанавливаем FirebirdSql.Data.FirebirdClient-4.10.0.0.msi
+Распаковываем EntityFramework.Firebird-4.10.0.0-NET45.7z в папку с установленным клиентом Firebird. У меня это папка c:\Program Files (x86)\FirebirdClient\ 
+Важно! 
+
+Это необходимо делать с правами администратора. Как и другие действия с защищёнными директориями.
+
+Необходимо установить сборки Firebird в GAC. Для удобство пописываем в %PATH% путь до утилиты gacutil для .NET Framework 4.5. У меня этот путь c:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\
+Запускаем командную строку cmd от имени администратора и переходим в директорию с установленным клиентом.
+chdir "c:\Program Files (x86)\FirebirdClient"
+
+Теперь проверяем что FirebirdSql.Data.FirebirdClient установлен в GAC. Для этого набираем команду
+gacutil /l FirebirdSql.Data.FirebirdClient
+Microsoft (R) .NET Global Assembly Cache Utility. Version 4.0.30319.0
+c Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+В глобальном кэше сборок содержатся следующие сборки:
+FirebirdSql.Data.FirebirdClient, Version=4.10.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL
+
+Число элементов = 1
+
+Если FirebirdSql.Data.FirebirdClient не был установлен в GAC, то сделаем это с помощью команды
+gacutil /i FirebirdSql.Data.FirebirdClient.dll
+
+Теперь установим EntityFramework.Firebird в GAC
+gacutil /i EntityFramework.Firebird.dll
+
+Распаковываем DDEXProvider-3.0.2.0.7z в удобную директорию. Я распаковал её в c:\Program Files (x86)\FirebirdDDEX\
+Туда же распаковываем DDEXProvider-3.0.2.0-src.7z содержимое поддиректории архива /reg_files/VS2015
+Примечание автора 
+
+Забавно, но по какой-то причине этих файлов нет в предыдущем архиве со скомпилированными dll библиотеками, но они присутствуют в архиве с исходными кодами.
+
+Открываем файл FirebirdDDEXProvider64.reg с помощью блокнота. Находим строчку, которая содержит %path% и меняем его на полный путь к файлу FirebirdSql.VisualStudio.DataTools.dll
+
+"CodeBase"="c:\\Program Files (x86)\\FirebirdDDEX\\FirebirdSql.VisualStudio.DataTools.dll"
+Сохраняем этот файл, запускаем его. На запрос добавить информацию в реестр нажимаем ДА.
+Теперь нужно отредактировать файл machine.config, в моем случае он находится по пути: C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config
+Открываем этот файл блокнотом. Находим секцию 
+<system.data>
+<DbProviderFactories>
+
+Добавляем в эту секцию строчку:
+<add name="FirebirdClient Data Provider" invariant="FirebirdSql.Data.FirebirdClient" description=".Net Framework Data Provider for Firebird" type="FirebirdSql.Data.FirebirdClient.FirebirdClientFactory, FirebirdSql.Data.FirebirdClient, Version=4.10.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c" />
+
+Замечание 
+Всё это действительно для версии 4.10.0.
+
+То же самое проделаем для machine.config. который находится в c:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\
+
+Установка закончена.
+
+----------------------------------------------------------------------
+
+Добавление Nuget пакетов в проект
+
+1. Добавить EF v6.1.3
+2. Добавить FirebirdSql.Data.FirebirdClient v4.10.0
+3. Добавить EntityFramework.Firebird v4.10.0

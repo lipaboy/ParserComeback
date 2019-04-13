@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{21AC8619-AE11-491F-95E4-9858701C297D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PupaParserComeback.Presentation</RootNamespace>
+    <AssemblyName>PupaParserComeback.Presentation</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\BaseViewModel.cs" />
+    <Compile Include="Abstract\CommandBase.cs" />
+    <Compile Include="Abstract\IStateChanged.cs" />
+    <Compile Include="Constants\NotificationConstants.cs" />
+    <Compile Include="Enums\StateResult.cs" />
+    <Compile Include="EventArguments\StateEventArgs.cs" />
+    <Compile Include="ExtensionMethods\EnumExtension.cs" />
+    <Compile Include="Interfaces\IRecruitCardGroupFactory.cs" />
+    <Compile Include="Abstract\IParameterizedCommandAsync.cs" />
+    <Compile Include="Abstract\IValidCardGroup.cs" />
+    <Compile Include="Abstract\UIModel.cs" />
+    <Compile Include="Commands\ActionCommand.cs" />
+    <Compile Include="Commands\AsyncCommand.cs" />
+    <Compile Include="Constants\ErrorConstants.cs" />
+    <Compile Include="Constants\RegexConstants.cs" />
+    <Compile Include="Constants\SeparatorConstants.cs" />
+    <Compile Include="Constants\TitleConstants.cs" />
+    <Compile Include="Enums\RecruitOperation.cs" />
+    <Compile Include="EventArguments\RecruitOperationEventArgs.cs" />
+    <Compile Include="EventArguments\SettingsEventArgs.cs" />
+    <Compile Include="Interfaces\IImportedRecruitRepository.cs" />
+    <Compile Include="Interfaces\IRecruitImporter.cs" />
+    <Compile Include="Interfaces\IRecruitExcelExporter.cs" />
+    <Compile Include="Interfaces\IRecruitExcelExporterFactory.cs" />
+    <Compile Include="Mappers\CardGroupMapper.cs" />
+    <Compile Include="Mappers\RecruitInfoMapper.cs" />
+    <Compile Include="Models\CardGroups\FirstCardGroup.cs" />
+    <Compile Include="Models\CardGroups\RecruitCardGroup.cs" />
+    <Compile Include="Models\CardGroups\SecondCardGroup.cs" />
+    <Compile Include="Models\CardGroups\ThirdCardGroup.cs" />
+    <Compile Include="Models\Cards\CivilCard.cs" />
+    <Compile Include="Models\Cards\ContactsCard.cs" />
+    <Compile Include="Models\Cards\CriminalCard.cs" />
+    <Compile Include="Models\Cards\DistributionCard.cs" />
+    <Compile Include="Models\Cards\DiverCard.cs" />
+    <Compile Include="Models\Cards\FamilyCard.cs" />
+    <Compile Include="Models\Cards\MedicineCard.cs" />
+    <Compile Include="Models\Cards\MilitaryDocumentCard.cs" />
+    <Compile Include="Models\Cards\PassportAccommodationCard.cs" />
+    <Compile Include="Models\Cards\PassportFamilyInfoCard.cs" />
+    <Compile Include="Models\Cards\PassportInfoCard.cs" />
+    <Compile Include="Models\Cards\PassportPersonInfoCard.cs" />
+    <Compile Include="Models\Cards\PhysiologicalCharacteristicsCard.cs" />
+    <Compile Include="Models\Cards\ProficiencyCard.cs" />
+    <Compile Include="Models\Cards\RelativeInfoCard.cs" />
+    <Compile Include="Models\Cards\ServiceCard.cs" />
+    <Compile Include="Models\Cards\SettingsCard.cs" />
+    <Compile Include="Models\Cards\SportCard.cs" />
+    <Compile Include="Models\RecruitShortUIModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecruitCommands\AddRecruitCommand.cs" />
+    <Compile Include="RecruitCommands\EditRecruitCommand.cs" />
+    <Compile Include="RecruitCommands\ExportRecruitCommand.cs" />
+    <Compile Include="RecruitCommands\ExportTableRecruitCommand.cs" />
+    <Compile Include="RecruitCommands\Parameters\AddRecruitCommandParameters.cs" />
+    <Compile Include="RecruitCommands\Parameters\BaseRecruitCommandParameter.cs" />
+    <Compile Include="RecruitCommands\Parameters\EditRecruitCommandParameters.cs" />
+    <Compile Include="RecruitCommands\Parameters\ExportTableRecruitCommandParameters.cs" />
+    <Compile Include="RecruitCommands\ImportRecruitsCommand.cs" />
+    <Compile Include="RecruitCommands\Parameters\ExportRecruitCommandParameters.cs" />
+    <Compile Include="RecruitCommands\Parameters\ImportRecruitCommandParameters.cs" />
+    <Compile Include="RecruitCommands\Parameters\RemoveRecruitCommandParameters.cs" />
+    <Compile Include="RecruitCommands\Parameters\SaveRecruitCommandParameters.cs" />
+    <Compile Include="RecruitCommands\Parameters\TransmitRecruitCommandParameters.cs" />
+    <Compile Include="RecruitCommands\Parameters\UpdateRecruitsCommandParameters.cs" />
+    <Compile Include="RecruitCommands\RemoveRecruitCommand.cs" />
+    <Compile Include="RecruitCommands\SaveRecruitCommand.cs" />
+    <Compile Include="RecruitCommands\TransmitRecruitCommand.cs" />
+    <Compile Include="RecruitCommands\UpdateRecruitsCommand.cs" />
+    <Compile Include="RecruitFactories\RecruitCardGroupFactory.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\RecruitViewModel.cs" />
+    <Compile Include="ViewModels\SettingsViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PupaParserComeback.Domain\PupaParserComeback.Domain.csproj">
+      <Project>{C4E1EA74-3CE6-4F76-ADE4-5E1A90908C6A}</Project>
+      <Name>PupaParserComeback.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

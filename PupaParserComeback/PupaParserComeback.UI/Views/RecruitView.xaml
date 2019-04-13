@@ -1,0 +1,122 @@
+﻿<Window x:Class="PupaParserComeback.UI.Views.RecruitView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PupaParserComeback.UI.Views"
+        xmlns:cards="clr-namespace:PupaParserComeback.Presentation.Models.Cards;assembly=PupaParserComeback.Presentation"
+        xmlns:constants="clr-namespace:PupaParserComeback.Presentation.Constants;assembly=PupaParserComeback.Presentation"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Width="1024" Height="900"
+        Title="{x:Static constants:TitleConstants.AppViewTitle}">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="8*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="8*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <materialDesign:Card Grid.Column="1"
+                                 Margin="4 4 0 0" 
+                                 Padding="5">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="0.25*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="0.25*" />
+                        <ColumnDefinition Width="1.5*" />
+                        <ColumnDefinition Width="0.25*" />
+                        <ColumnDefinition Width="1.5*" />
+                    </Grid.ColumnDefinitions>
+
+                <TextBox Grid.Column="0" 
+                         Margin="5 0 0 10" 
+                         VerticalAlignment="Center"
+                         materialDesign:HintAssist.Hint="{x:Static cards:ServiceCard.SqliteIdFieldName}" 
+                         materialDesign:HintAssist.IsFloating="True"
+                         Text="{Binding RecruitCardGroup.ServiceCard.SqliteId}"
+                         IsReadOnly="True" />
+
+                <TextBox Grid.Column="2" 
+                         Margin="5 0 0 10" 
+                         VerticalAlignment="Center"
+                         materialDesign:HintAssist.Hint="{x:Static cards:ServiceCard.FormIdFieldName}" 
+                         materialDesign:HintAssist.IsFloating="True"
+                         Text="{Binding RecruitCardGroup.ServiceCard.FirebirdId}"
+                         IsReadOnly="True" />
+
+                    <ComboBox Grid.Column="4"
+                              Padding="4"
+                              Margin="0 0 0 10"
+                              VerticalAlignment="Center"
+                              materialDesign:HintAssist.Hint="{x:Static cards:ServiceCard.RegionalCollectionPointFieldName}" 
+                              materialDesign:HintAssist.IsFloating="True"
+                              ItemsSource="{Binding RecruitCardGroup.ServiceCard.RegionalCollectionPoints}"
+                              SelectedItem="{Binding RecruitCardGroup.ServiceCard.RegionalCollectionPoint,
+                                                     UpdateSourceTrigger=PropertyChanged,
+                                                     ValidatesOnDataErrors=True}" />
+
+                    <DatePicker Grid.Column="6" 
+                                Margin="5 15 5 15"
+                                materialDesign:HintAssist.Hint="{x:Static cards:ServiceCard.ConscriptionDateFieldName}" 
+                                materialDesign:HintAssist.IsFloating="True"
+                                SelectedDate="{Binding RecruitCardGroup.ServiceCard.ConscriptionDate}" />
+                </Grid>
+            </materialDesign:Card>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <materialDesign:Transitioner SelectedIndex="0"
+                                         materialDesign:ValidationAssist.OnlyShowOnFocus="True">
+
+                <materialDesign:TransitionerSlide>
+                    <materialDesign:TransitionerSlide.ForwardWipe>
+                        <materialDesign:SlideWipe Direction="Left" />
+                    </materialDesign:TransitionerSlide.ForwardWipe>
+
+                    <local:RecruitFirstView />
+                </materialDesign:TransitionerSlide>
+
+                <materialDesign:TransitionerSlide>
+                    <materialDesign:TransitionerSlide.BackwardWipe>
+                        <materialDesign:SlideWipe Direction="Right" />
+                    </materialDesign:TransitionerSlide.BackwardWipe>
+
+                    <materialDesign:TransitionerSlide.ForwardWipe>
+                        <materialDesign:SlideWipe Direction="Left" />
+                    </materialDesign:TransitionerSlide.ForwardWipe>
+
+                    <local:RecruitSecondView />
+                </materialDesign:TransitionerSlide>
+
+
+                <materialDesign:TransitionerSlide>
+                    <materialDesign:TransitionerSlide.BackwardWipe>
+                        <materialDesign:SlideWipe Direction="Right" />
+                    </materialDesign:TransitionerSlide.BackwardWipe>
+
+                    <local:RecruitThirdView />
+                </materialDesign:TransitionerSlide>
+
+            </materialDesign:Transitioner>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Button Style="{DynamicResource MaterialDesignToolButton}"
+                    Content="{materialDesign:PackIcon Kind=Check,Size=25}"
+                    Command="{Binding SaveRecruitCommand}" />
+        </Grid>
+    </Grid>
+</Window>

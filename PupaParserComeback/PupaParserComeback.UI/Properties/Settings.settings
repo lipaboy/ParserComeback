@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PupaParserComeback.UI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ImportDirectoryPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\master\Desktop\1</Value>
+    </Setting>
+    <Setting Name="PersonalPhotoDirectoryPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\master\Documents\visual studio 2015\Projects\PupaParserComeback\PupaParserComeback.UI\Images\</Value>
+    </Setting>
+    <Setting Name="FirebirdLocalFilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\master\Documents\Visual Studio 2015\Projects\PupaParserComeback\PupaParserComeback.Data.Firebird\Db\FORM2017-2.GDB</Value>
+    </Setting>
+    <Setting Name="SqliteLocalFilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\master\Documents\visual studio 2015\Projects\PupaParserComeback\PupaParserComeback.Data.SQLite\Db\Main.db</Value>
+    </Setting>
+    <Setting Name="ExportTemplateFilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\master\Documents\visual studio 2015\Projects\PupaParserComeback\PupaParserComeback.UI\Templates\ABPattern.xls</Value>
+    </Setting>
+    <Setting Name="ExportTableTemplateFilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\master\Documents\visual studio 2015\Projects\PupaParserComeback\PupaParserComeback.UI\Templates\ExportTableTemplate.xlsx</Value>
+    </Setting>
+    <Setting Name="ExportDirectoryPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\master\Documents\visual studio 2015\Projects\PupaParserComeback\PupaParserComeback.Export\ExportedFiles</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

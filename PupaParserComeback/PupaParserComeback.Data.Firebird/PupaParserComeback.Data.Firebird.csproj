@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B58F13A-3F2A-4D7B-BD79-54F5641D268B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PupaParserComeback.Data.Firebird</RootNamespace>
+    <AssemblyName>PupaParserComeback.Data.Firebird</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.Firebird, Version=4.10.0.0, Culture=neutral, PublicKeyToken=42d22d092898e5f8, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.Firebird.4.10.0.0\lib\net45\EntityFramework.Firebird.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=4.10.0.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <HintPath>..\packages\FirebirdSql.Data.FirebirdClient.4.10.0.0\lib\net45\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\IDbContextCache.cs" />
+    <Compile Include="Abstract\IDbContextFactory.cs" />
+    <Compile Include="Abstract\IDbContextRepository.cs" />
+    <Compile Include="Abstract\IPrizCommand.cs" />
+    <Compile Include="Abstract\IPrizQuery.cs" />
+    <Compile Include="Concrete\DbContextCache.cs" />
+    <Compile Include="Concrete\DbContextFactory.cs" />
+    <Compile Include="Concrete\PrizCommand.cs" />
+    <Compile Include="Concrete\PrizQuery.cs" />
+    <Compile Include="Concrete\RecruitInfoMapper.cs" />
+    <Compile Include="Constants\FbErrorCode.cs" />
+    <Compile Include="Dto\DepartureKom.cs" />
+    <Compile Include="Dto\DISMISS.cs" />
+    <Compile Include="Dto\DO_PRIZ.cs" />
+    <Compile Include="DtoComparers\PrizComparer.cs" />
+    <Compile Include="Dto\DUP.cs" />
+    <Compile Include="Exceptions\AlreadyExistsException.cs" />
+    <Compile Include="ExtensionMethods\FirebirdDbContextExtensions.cs" />
+    <Compile Include="FormDbContext.cs" />
+    <Compile Include="Dto\GORODA.cs" />
+    <Compile Include="Dto\IBE_LOG_BLOB_FIELDS.cs" />
+    <Compile Include="Dto\IBE_LOG_FIELDS.cs" />
+    <Compile Include="Dto\IBE_LOG_KEYS.cs" />
+    <Compile Include="Dto\IBE_LOG_TABLES.cs" />
+    <Compile Include="Dto\IBE_VERSION_HISTORY.cs" />
+    <Compile Include="Implementations\TransmitService.cs" />
+    <Compile Include="Implementations\UnitOfWork.cs" />
+    <Compile Include="Implementations\UnitOfWorkFactory.cs" />
+    <Compile Include="Dto\KN_P.cs" />
+    <Compile Include="Dto\kom.cs" />
+    <Compile Include="Dto\LOG_P.cs" />
+    <Compile Include="Dto\NA_UCHETE.cs" />
+    <Compile Include="Dto\NET_N_VB.cs" />
+    <Compile Include="Dto\NVOZVR.cs" />
+    <Compile Include="Dto\OBRAZ.cs" />
+    <Compile Include="Dto\OPERAT_SPR.cs" />
+    <Compile Include="Dto\PEC.cs" />
+    <Compile Include="Dto\PEC_STATE.cs" />
+    <Compile Include="Dto\PrintLog.cs" />
+    <Compile Include="Dto\PRIZ.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Dto\RAILROAD.cs" />
+    <Compile Include="Dto\rezhim.cs" />
+    <Compile Include="Dto\REZH_KOM.cs" />
+    <Compile Include="Dto\RVK.cs" />
+    <Compile Include="Dto\SEM_POL.cs" />
+    <Compile Include="Dto\SPEC.cs" />
+    <Compile Include="Dto\SUD.cs" />
+    <Compile Include="Dto\VID_VS.cs" />
+    <Compile Include="Dto\VID_VS_FOR_PRIC.cs" />
+    <Compile Include="Dto\V_OKRUG.cs" />
+    <Compile Include="Dto\ZVAN.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PupaParserComeback.Domain\PupaParserComeback.Domain.csproj">
+      <Project>{c4e1ea74-3ce6-4f76-ade4-5e1a90908c6a}</Project>
+      <Name>PupaParserComeback.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Db\FORM2017-2.GDB" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FirebirdHelp.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
