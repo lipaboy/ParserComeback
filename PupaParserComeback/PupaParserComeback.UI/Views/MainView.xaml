@@ -10,7 +10,7 @@
         xmlns:constants="clr-namespace:PupaParserComeback.Presentation.Constants;assembly=PupaParserComeback.Presentation"
         xmlns:domainEnums="clr-namespace:PupaParserComeback.Domain.Enums;assembly=PupaParserComeback.Domain"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Width="1150" Height="900"
+        WindowState="Maximized"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         Title="{x:Static constants:TitleConstants.AppViewTitle}">

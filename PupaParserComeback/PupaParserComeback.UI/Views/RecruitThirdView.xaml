@@ -8,7 +8,9 @@
              xmlns:constants="clr-namespace:PupaParserComeback.Presentation.Constants;assembly=PupaParserComeback.Presentation"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" 
+             d:DesignWidth="300"
+             >
 
     <materialDesign:ColorZone Mode="Light" 
                               VerticalAlignment="Stretch" 
@@ -158,6 +160,7 @@
 
                                 <TextBox Grid.Column="0"
                                          Margin="0 0 0 0" 
+                                         FontSize="16"
                                          HorizontalContentAlignment="Left" 
                                          VerticalContentAlignment="Center"
                                          materialDesign:HintAssist.Hint="{x:Static cards:ContactsCard.HomePhoneFieldName}" 
@@ -182,6 +185,7 @@
 
                                 <TextBox Grid.Column="0"
                                          Margin="0 0 0 0" 
+                                         FontSize="16"
                                          HorizontalContentAlignment="Left" 
                                          VerticalContentAlignment="Center"
                                          materialDesign:HintAssist.Hint="{x:Static cards:ContactsCard.MobilePhoneFieldName}" 
@@ -337,6 +341,7 @@
 
                             <ComboBox Grid.Row="1"
                                       Margin="0 0 0 0" 
+                                      FontSize="16"
                                       HorizontalContentAlignment="Left" 
                                       VerticalContentAlignment="Center"
                                       materialDesign:HintAssist.Hint="{x:Static cards:FamilyCard.ParentFamilyStatusFieldName}" 
