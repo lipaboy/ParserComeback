@@ -336,8 +336,8 @@
                     </materialDesign:Card>
 
                     <materialDesign:Card Grid.Row="1"
-                                     Margin="4 4 0 0" 
-                                     Padding="5">
+                                     Margin="4,4,0,-8" 
+                                     Padding="5" Height="166">
 
                         <Grid>
                             <Grid.RowDefinitions>

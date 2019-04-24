@@ -9,8 +9,8 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Height="600" 
-        Width="800"
+        Height="700" 
+        Width="1000"
         Title="{x:Static constants:TitleConstants.SettingsViewTitle}">
 
     <Grid>
@@ -20,8 +20,8 @@
         </Grid.RowDefinitions>
 
         <materialDesign:Card Grid.Row="0"
-                             Margin="4" 
-                             Padding="5">
+                             Margin="4,4,4,0" 
+                             Padding="5" Height="603">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
@@ -70,7 +70,7 @@
                          Text="{Binding SettingsCard.PersonalPhotoDirectoryPath,
                                         UpdateSourceTrigger=PropertyChanged,
                                         ValidatesOnDataErrors=True }" />
-                
+
                 <TextBox Grid.Row="4"
                          Margin="5 10 5 10"
                          HorizontalContentAlignment="Left" 
