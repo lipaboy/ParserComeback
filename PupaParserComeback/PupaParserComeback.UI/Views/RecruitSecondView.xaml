@@ -81,6 +81,7 @@
 
                             <ComboBox Grid.Row="3"
                                       Margin="0 0 0 0" 
+                                      FontSize="14"
                                       HorizontalContentAlignment="Left" 
                                       VerticalContentAlignment="Center"
                                       materialDesign:HintAssist.Hint="{x:Static cards:MilitaryDocumentCard.AccessFormFieldName}" 
@@ -93,6 +94,7 @@
 
                             <TextBox Grid.Row="4"
                                      Margin="0 0 0 0" 
+                                     FontSize="14"
                                      HorizontalContentAlignment="Left" 
                                      VerticalContentAlignment="Center"
                                      materialDesign:HintAssist.Hint="{x:Static cards:MilitaryDocumentCard.SecretAccessNumberFieldName}" 
@@ -106,6 +108,7 @@
 
                             <DatePicker Grid.Row="5" 
                                         Margin="0 20 0 0" 
+                                        FontSize="14"
                                         HorizontalContentAlignment="Left" 
                                         VerticalContentAlignment="Center"
                                         materialDesign:HintAssist.Hint="{x:Static cards:MilitaryDocumentCard.SecretAccessIssueDateFieldName}" 
@@ -295,7 +298,8 @@
                                        Text="{x:Static constants:TitleConstants.DriverCardTitle}" />
 
                             <TextBox Grid.Row="1"
-                                     Margin="0 0 0 0" 
+                                     Margin="0 0 0 0"
+                                     FontSize="14"
                                      HorizontalContentAlignment="Left" 
                                      VerticalContentAlignment="Center"
                                      materialDesign:HintAssist.Hint="{x:Static cards:DriverCard.DriverLicenseCodeFieldName}" 
@@ -307,6 +311,7 @@
 
                             <DatePicker Grid.Row="2"
                                     Margin="0 20 0 0" 
+                                    FontSize="14"
                                     HorizontalContentAlignment="Left" 
                                     VerticalContentAlignment="Center"
                                     materialDesign:HintAssist.Hint="{x:Static cards:DriverCard.DriverLicenseIssueDateFieldName}" 

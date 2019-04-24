@@ -58,6 +58,7 @@
 
                             <ComboBox Grid.Row="1"
                                       Margin="0 0 0 0" 
+                                      FontSize="14"
                                       HorizontalContentAlignment="Left" 
                                       VerticalContentAlignment="Center"
                                       materialDesign:HintAssist.Hint="{x:Static cards:MedicineCard.RankFieldName}" 
@@ -74,6 +75,7 @@
                                 </Grid.ColumnDefinitions>
 
                                 <TextBox Margin="0 0 0 0" 
+                                         FontSize="14"
                                          HorizontalContentAlignment="Left" 
                                          VerticalContentAlignment="Center"
                                          materialDesign:HintAssist.Hint="{x:Static cards:MedicineCard.AdditionalRequirementsTableFieldName}" 
@@ -92,6 +94,7 @@
 
                             <TextBox Grid.Row="3"
                                      Margin="0 0 0 0" 
+                                     FontSize="14"
                                      HorizontalContentAlignment="Left" 
                                      VerticalContentAlignment="Center"
                                      materialDesign:HintAssist.Hint="{x:Static cards:MedicineCard.DiseaseArticlesFieldName}" 
@@ -107,6 +110,7 @@
                                 </Grid.ColumnDefinitions>
 
                                 <TextBox Margin="0 0 0 0" 
+                                         FontSize="14"
                                          HorizontalContentAlignment="Left" 
                                          VerticalContentAlignment="Center"
                                          materialDesign:HintAssist.Hint="{x:Static cards:MedicineCard.VisionFieldName}" 
@@ -125,6 +129,7 @@
 
                             <ComboBox Grid.Row="5"
                                       Margin="0 0 0 0" 
+                                      FontSize="14"
                                       HorizontalContentAlignment="Left" 
                                       VerticalContentAlignment="Center"
                                       materialDesign:HintAssist.Hint="{x:Static cards:MedicineCard.BloodTypeFieldName}" 

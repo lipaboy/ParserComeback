@@ -51,6 +51,9 @@ namespace PupaParserComeback.Data.Firebird.Dto
         public string NPU { get; set; }
 
         [StringLength(30)]
+        public string OPS { get; set; }
+
+        [StringLength(30)]
         public string REZH_KOM { get; set; }
 
         [StringLength(1)]

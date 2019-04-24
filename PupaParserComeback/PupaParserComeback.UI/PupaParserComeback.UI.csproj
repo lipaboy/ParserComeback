@@ -207,9 +207,7 @@
     <None Include="Templates\ExportTableTemplate.xlsx" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PupaParserComeback.Export\PupaParserComeback.Export.csproj">

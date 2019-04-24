@@ -54,6 +54,7 @@ namespace PupaParserComeback.Data.Firebird.Dto
                    D_DOP.GetHashCode() ^
                    PROF_P.GetHashCode() ^
                    NPU.GetHashCode() ^
+                   OPS.GetHashCode() ^
                    REZH_KOM.GetHashCode() ^
 
                    OBRAZOV.GetHashCode() ^
@@ -109,6 +110,7 @@ namespace PupaParserComeback.Data.Firebird.Dto
                    D_DOP == other.D_DOP &&
                    PROF_P == other.PROF_P &&
                    NPU == other.NPU &&
+                   OPS == other.OPS &&
                    REZH_KOM == other.REZH_KOM &&
 
                    OBRAZOV == other.OBRAZOV &&

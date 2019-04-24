@@ -80,6 +80,7 @@
 
                             <DatePicker Grid.Row="3"
                                         Margin="0 20 0 0"
+                                        FontSize="14"
                                         HorizontalContentAlignment="Left" 
                                         VerticalContentAlignment="Center"
                                         materialDesign:HintAssist.Hint="{x:Static cards:PassportInfoCard.IssueDateFieldName}" 
@@ -88,6 +89,7 @@
 
                             <TextBox Grid.Row="4"
                                      Margin="0 0 0 0"
+                                     FontSize="14"
                                      HorizontalContentAlignment="Left" 
                                      VerticalContentAlignment="Center"
                                      materialDesign:HintAssist.Hint="{x:Static cards:PassportInfoCard.DevisionCodeFieldName}" 
@@ -118,6 +120,7 @@
 
                             <TextBox Grid.Row="1"
                                      Margin="0 0 0 0"
+                                     FontSize="14"
                                      HorizontalContentAlignment="Left" 
                                      VerticalContentAlignment="Center"
                                      materialDesign:HintAssist.Hint="{x:Static cards:PassportAccommodationCard.LocalityFieldName}" 
@@ -134,6 +137,7 @@
 
                                 <TextBox Grid.Column="0"
                                          Margin="0 0 0 0"
+                                         FontSize="14"
                                          HorizontalContentAlignment="Left" 
                                          VerticalContentAlignment="Center"
                                          materialDesign:HintAssist.Hint="{x:Static cards:PassportAccommodationCard.RegisterLocationFieldName}" 
@@ -158,6 +162,7 @@
 
                                 <TextBox Grid.Column="0"
                                          Margin="0 0 0 0"
+                                         FontSize="14"
                                          HorizontalContentAlignment="Left" 
                                          VerticalContentAlignment="Center"
                                          materialDesign:HintAssist.Hint="{x:Static cards:PassportAccommodationCard.ActuallyLocationFieldName}" 
@@ -245,6 +250,7 @@
 
                                 <DatePicker Grid.Row="4"
                                             Margin="0 20 0 0"
+                                            FontSize="14"
                                             HorizontalContentAlignment="Left" 
                                             VerticalContentAlignment="Center"
                                             materialDesign:HintAssist.Hint="{x:Static cards:PassportPersonInfoCard.BirthDateFieldName}" 
@@ -253,6 +259,7 @@
 
                                 <TextBox Grid.Row="5"
                                          Margin="0 0 0 0"
+                                         FontSize="14"
                                          HorizontalContentAlignment="Left" 
                                          VerticalContentAlignment="Center"
                                          materialDesign:HintAssist.Hint="{x:Static cards:PassportPersonInfoCard.BirthPlaceFieldName}" 

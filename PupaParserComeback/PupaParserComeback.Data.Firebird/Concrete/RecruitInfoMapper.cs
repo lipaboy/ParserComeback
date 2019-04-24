@@ -131,6 +131,7 @@ namespace PupaParserComeback.Data.Firebird.Concrete
 
             priz.PROF_P = militaryInfo.ProficiencyCard.ProficiencyCategory.ToProficiencyCategoryString();
             priz.NPU = militaryInfo.ProficiencyCard.NervouslyPsychologicalStability.ToNervouslyPsychologicalStatusString();
+            priz.OPS = militaryInfo.ProficiencyCard.GeneralPsychologicalStability.ToGeneralPsychologicalStatusString();
 
             priz.SPEC = militaryInfo.Speciality;
             priz.REZH_KOM = militaryInfo.TeamMode;

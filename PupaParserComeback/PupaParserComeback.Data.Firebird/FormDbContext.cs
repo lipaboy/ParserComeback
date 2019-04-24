@@ -17,6 +17,7 @@ namespace PupaParserComeback.Data.Firebird
                 var fbConnectionStrBldr = new FbConnectionStringBuilder(Database.Connection.ConnectionString);
                 fbConnectionStrBldr.Database = initialCatalog;
                 Database.Connection.ConnectionString = fbConnectionStrBldr.ConnectionString;
+                Database.Connection.ConnectionString = Database.Connection.ConnectionString.Replace("data source=localhost", "data source=192.168.1.1");
             }
         }
 

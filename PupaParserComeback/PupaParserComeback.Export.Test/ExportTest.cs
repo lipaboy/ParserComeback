@@ -245,6 +245,12 @@ namespace PupaParserComeback.Export.Test
             Assert.AreEqual(nps, range[rowIdx, columnIdx].Value);
 
             rowIdx = rowRange.Next();
+            Assert.AreEqual("ОПС", range[rowIdx, keyIdx].Value);
+            var ops = recruitInfo.Envelope.MilitaryInfo.ProficiencyCard.GeneralPsychologicalStability.ToGeneralPsychologicalStatusString().Substring(0, 3) + ".";
+
+            Assert.AreEqual(ops, range[rowIdx, columnIdx].Value);
+
+            rowIdx = rowRange.Next();
             Assert.AreEqual("Профпригодность", range[rowIdx, keyIdx].Value);
             var proficiency = recruitInfo.Envelope.MilitaryInfo.ProficiencyCard.ProficiencyCategory.ToProficiencyCategoryString();
             Assert.AreEqual(proficiency, range[rowIdx, columnIdx].Value);

@@ -18,7 +18,7 @@ namespace PupaParserComeback.Export
     public class RecruitExcelExporter : IRecruitExcelExporter
     {
         public const int MinRowIdx = 1;
-        public const int MaxRowIdx = 40;
+        public const int MaxRowIdx = 41;
 
         private readonly string _templateFilePath;
         private readonly string _filePath;
@@ -163,9 +163,11 @@ namespace PupaParserComeback.Export
             range.set_Item(rowIndexes.Next(), columnIdx, recruitInfo.Envelope.MilitaryInfo.TeamMode);
             range.set_Item(rowIndexes.Next(), columnIdx, recruitInfo.Envelope.PassportInfo.PersonInfo.BirthInfo.Place);
 
-            var nps = recruitInfo.Envelope.MilitaryInfo.ProficiencyCard.NervouslyPsychologicalStability
-                .ToNervouslyPsychologicalStatusString().Substring(0, 3) + ".";
+            var nps = recruitInfo.Envelope.MilitaryInfo.ProficiencyCard.NervouslyPsychologicalStability.ToNervouslyPsychologicalStatusString().Substring(0, 3) + ".";
             range.set_Item(rowIndexes.Next(), columnIdx, nps);
+
+            var ops = recruitInfo.Envelope.MilitaryInfo.ProficiencyCard.GeneralPsychologicalStability.ToGeneralPsychologicalStatusString().Substring(0, 3) + ".";
+            range.set_Item(rowIndexes.Next(), columnIdx, ops);
 
             range.set_Item(rowIndexes.Next(), columnIdx, recruitInfo.Envelope.MilitaryInfo.ProficiencyCard.ProficiencyCategory
                 .ToProficiencyCategoryString());
