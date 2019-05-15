@@ -73,6 +73,7 @@
 
                             <TextBox Grid.Row="2"
                                      Margin="0 0 0 0"
+                                     TextWrapping="Wrap"
                                      HorizontalContentAlignment="Left" 
                                      VerticalContentAlignment="Center"
                                      materialDesign:HintAssist.Hint="{x:Static cards:PassportInfoCard.IssueByFieldName}" 
@@ -104,7 +105,7 @@
                     </materialDesign:Card>
 
                     <materialDesign:Card Grid.Row="1"
-                                     Margin="0,4,0,0" 
+                                     Margin="4,4,0,4" 
                                      Padding="5" Height="229">
 
                         <Grid>
@@ -141,6 +142,7 @@
                                 <TextBox Grid.Column="0"
                                          Margin="0 0 0 0"
                                          FontSize="12"
+                                         TextWrapping="Wrap"
                                          HorizontalContentAlignment="Left" 
                                          VerticalContentAlignment="Center"
                                          materialDesign:HintAssist.Hint="{x:Static cards:PassportAccommodationCard.RegisterLocationFieldName}" 
@@ -166,6 +168,7 @@
                                 <TextBox Grid.Column="0"
                                          Margin="0 0 0 0"
                                          FontSize="12"
+                                         TextWrapping="Wrap"
                                          HorizontalContentAlignment="Left" 
                                          VerticalContentAlignment="Center"
                                          materialDesign:HintAssist.Hint="{x:Static cards:PassportAccommodationCard.ActuallyLocationFieldName}" 
@@ -187,7 +190,7 @@
 
                 <Grid Grid.Column="2" Margin="20 0 0 0">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="1.5*" />
+                        <RowDefinition Height="1.8*" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
 
@@ -204,12 +207,12 @@
                             <Grid Grid.Column="0">
 
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="*" />
-                                    <RowDefinition Height="*" />
-                                    <RowDefinition Height="*" />
-                                    <RowDefinition Height="*" />
-                                    <RowDefinition Height="*" />
-                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="8*" />
+                                    <RowDefinition Height="8*" />
+                                    <RowDefinition Height="8*" />
+                                    <RowDefinition Height="8*" />
+                                    <RowDefinition Height="8*" />
+                                    <RowDefinition Height="18*" />
                                 </Grid.RowDefinitions>
 
                                 <TextBlock Grid.Row="0"
@@ -252,7 +255,7 @@
                                                         ValidatesOnDataErrors=True}" />
 
                                 <DatePicker Grid.Row="4"
-                                            Margin="0 20 0 0"
+                                            Margin="0 14 0 0"
                                             FontSize="14"
                                             HorizontalContentAlignment="Left" 
                                             VerticalContentAlignment="Center"
@@ -263,6 +266,7 @@
                                 <TextBox Grid.Row="5"
                                          Margin="0 0 0 0"
                                          FontSize="14"
+                                         TextWrapping="Wrap"
                                          HorizontalContentAlignment="Left" 
                                          VerticalContentAlignment="Center"
                                          materialDesign:HintAssist.Hint="{x:Static cards:PassportPersonInfoCard.BirthPlaceFieldName}" 
@@ -318,13 +322,13 @@
                                 </Grid.RowDefinitions>
 
                                 <TextBlock Grid.Row="0"
-                                           Margin="16 16 12 0"
+                                           Margin="16 10 12 5"
                                            Padding="0 0 0 10"
                                            FontSize="16"
                                            Text="{x:Static constants:TitleConstants.PassportFamilyInfoCardTitle}" />
 
                                 <ComboBox Grid.Row="1"
-                                          Margin="5 10 5 10"
+                                          Margin="5 5 5 5"
                                           HorizontalContentAlignment="Left" 
                                           VerticalContentAlignment="Center"
                                           materialDesign:HintAssist.Hint="{x:Static cards:PassportFamilyInfoCard.FamilyStatusFieldName}" 
@@ -335,7 +339,7 @@
                                                                  ValidatesOnDataErrors=True}" />
 
                                 <ToggleButton Grid.Row="2"
-                                              Margin="5 25 5 5"
+                                              Margin="5 15 5 5"
                                               Style="{StaticResource MaterialDesignActionToggleButton}"
                                               ToolTip="{x:Static cards:PassportFamilyInfoCard.IsHaveBabyFieldName}"
                                               IsChecked="{Binding RecruitCardGroup.FirstCardGroup.PassportFamilyInfoCard.IsHaveBaby}">
@@ -369,7 +373,7 @@
                                            Text="{x:Static constants:TitleConstants.CriminalCardTitle}" />
 
                                 <ComboBox Grid.Row="1"
-                                          Margin="5 10 5 10"
+                                          Margin="5 5 5 10"
                                           HorizontalContentAlignment="Left" 
                                           VerticalContentAlignment="Center"
                                           materialDesign:HintAssist.Hint="{x:Static cards:CriminalCard.RegisterStatusFieldName}" 
@@ -380,7 +384,7 @@
                                                                  ValidatesOnDataErrors=True}" />
 
                                 <ComboBox Grid.Row="2"
-                                          Margin="5 5 5 15"
+                                          Margin="5 5 5 10"
                                           HorizontalContentAlignment="Left" 
                                           VerticalContentAlignment="Center"
                                           materialDesign:HintAssist.Hint="{x:Static cards:CriminalCard.CriminalStatusFieldName}" 

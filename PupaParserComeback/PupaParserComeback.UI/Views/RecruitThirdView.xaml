@@ -8,8 +8,8 @@
              xmlns:constants="clr-namespace:PupaParserComeback.Presentation.Constants;assembly=PupaParserComeback.Presentation"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="300" 
-             d:DesignWidth="300"
+             d:DesignHeight="600" 
+             d:DesignWidth="700"
              >
 
     <materialDesign:ColorZone Mode="Light" 
