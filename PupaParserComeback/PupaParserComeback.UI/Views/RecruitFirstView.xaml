@@ -8,10 +8,8 @@
              xmlns:constants="clr-namespace:PupaParserComeback.Presentation.Constants;assembly=PupaParserComeback.Presentation"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="300" 
-             d:DesignWidth="300"
-             Height="auto"
-             Width="auto"
+             d:DesignHeight="600" 
+             d:DesignWidth="700"
              >
 
     <materialDesign:ColorZone Mode="Light" 
@@ -19,12 +17,17 @@
                               HorizontalAlignment="Stretch" 
                               VerticalContentAlignment="Stretch">
         <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="72*"/>
+                <ColumnDefinition Width="103*"/>
+            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="9*" />
-                <RowDefinition Height="*" />
+                <RowDefinition Height="113*" />
+                <RowDefinition Height="22*"/>
+                <RowDefinition Height="15*" />
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0">
+            <Grid Grid.Row="0" Grid.RowSpan="2" Margin="-53,0,0,0" Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.5*" />
                     <ColumnDefinition Width="2*" />
@@ -101,8 +104,8 @@
                     </materialDesign:Card>
 
                     <materialDesign:Card Grid.Row="1"
-                                     Margin="4 4 0 0" 
-                                     Padding="5">
+                                     Margin="0,4,0,0" 
+                                     Padding="5" Height="229">
 
                         <Grid>
                             <Grid.RowDefinitions>
@@ -137,7 +140,7 @@
 
                                 <TextBox Grid.Column="0"
                                          Margin="0 0 0 0"
-                                         FontSize="14"
+                                         FontSize="12"
                                          HorizontalContentAlignment="Left" 
                                          VerticalContentAlignment="Center"
                                          materialDesign:HintAssist.Hint="{x:Static cards:PassportAccommodationCard.RegisterLocationFieldName}" 
@@ -145,7 +148,7 @@
                                          Text="{Binding RecruitCardGroup.FirstCardGroup.PassportAccommodationCard.RegisterLocation,
                                                         UpdateSourceTrigger=PropertyChanged,
                                                         ValidatesOnDataErrors=True}" />
-                                
+
                                 <Button Grid.Column="1"
                                         Height="30"
                                         Width="30"
@@ -162,7 +165,7 @@
 
                                 <TextBox Grid.Column="0"
                                          Margin="0 0 0 0"
-                                         FontSize="14"
+                                         FontSize="12"
                                          HorizontalContentAlignment="Left" 
                                          VerticalContentAlignment="Center"
                                          materialDesign:HintAssist.Hint="{x:Static cards:PassportAccommodationCard.ActuallyLocationFieldName}" 
@@ -392,7 +395,7 @@
                 </Grid>
             </Grid>
 
-            <Grid Grid.Row="1">
+            <Grid Grid.Row="2" Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="6*" />

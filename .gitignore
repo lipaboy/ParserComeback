@@ -4,5 +4,4 @@
 **/bin
 **/obj
 **/*.jpg
-**/*.xlsx
-**/*.xls
+**/ExportedFiles
